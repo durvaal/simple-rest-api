@@ -1,0 +1,47 @@
+@BASE_URL = http://localhost:3000
+
+## Basic examples
+
+###
+GET {{BASE_URL}}/
+
+###
+GET {{BASE_URL}}/json
+
+###
+GET {{BASE_URL}}/html
+
+
+## External API
+
+###
+GET https://http.cat/200
+
+
+## Basic CRUD
+
+### Listar Tarefas
+GET {{BASE_URL}}/todo
+
+### Criar tarefa
+POST {{BASE_URL}}/todo
+Content-Type: application/json
+
+{
+  "task": "Fazer agachamento"
+}
+
+### Atualizar tarefa
+PUT {{BASE_URL}}/todo
+Content-Type: application/json
+
+{
+  "id": 1,
+  "task": "Fazer 1000 abdominais"
+}
+
+### Deletar tarefa
+DELETE {{BASE_URL}}/todo/1
+
+### Documentação
+GET {{BASE_URL}}/docs
