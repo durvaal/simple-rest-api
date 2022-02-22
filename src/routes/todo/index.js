@@ -3,14 +3,14 @@ const router = express.Router();
 const { todoData } = require('./todoData'); 
 
 // Listar tarefas
-router.get("/", (req, res, next) => {
+router.get('/', (req, res, next) => {
   // #swagger.tags = ['TODO']
   // #swagger.description = 'Endpoint para listar tarefas.'
   res.json(todoData.list);
 });
 
 // Criar tarefa
-router.post("/", (req, res, next) => {
+router.post('/', (req, res, next) => {
   // #swagger.tags = ['TODO']
   // #swagger.description = 'Endpoint para criar tarefa.'
   todoData.index++;
@@ -21,7 +21,7 @@ router.post("/", (req, res, next) => {
 });
 
 // Atualizar tarefa
-router.put("/", (req, res, next) => {
+router.put('/', (req, res, next) => {
   // #swagger.tags = ['TODO']
   // #swagger.description = 'Endpoint para atualizar tarefa.'
   const indexToUpdate = todoData.list.findIndex((todo) => todo.id === req.body.id);
@@ -33,7 +33,7 @@ router.put("/", (req, res, next) => {
 
 
 // Deletar tarefa
-router.delete("/:id", (req, res, next) => {
+router.delete('/:id', (req, res, next) => {
   // #swagger.tags = ['TODO']
   // #swagger.description = 'Endpoint para deletar tarefa.'
   const indexToDelete = todoData.list.findIndex((todo) => todo.id === parseInt(req.params.id, 10));

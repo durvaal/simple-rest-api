@@ -7,11 +7,11 @@ describe('API ::: Router ::: TO DO', () => {
     todoData.list = [
       {
         id: 1,
-        task: "Fazer 10 abdominais"
+        task: 'Fazer 10 abdominais'
       },
       {
         id: 2,
-        task: "Fazer supino"
+        task: 'Fazer supino'
       }
     ];
     todoData.index = 2;
@@ -49,7 +49,7 @@ describe('API ::: Router ::: TO DO', () => {
         .post('/todo')
         .set('Content-Type', 'application/json')
         .send({
-          "task": "Fazer agachamento"
+          'task': 'Fazer agachamento'
         })
         .end((err, res) => {
           done();
@@ -74,8 +74,8 @@ describe('API ::: Router ::: TO DO', () => {
         .put('/todo')
         .set('Content-Type', 'application/json')
         .send({
-          "id": 1,
-          "task": "Fazer 1000 abdominais"
+          'id': 1,
+          'task': 'Fazer 1000 abdominais'
         })
         .end((err, res) => {
           done();
