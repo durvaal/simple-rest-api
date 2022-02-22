@@ -2,17 +2,22 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "test": "jest --detectOpenHandles",
+    "start": "node server.js",
     "swagger-autogen": "node swagger.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2",
-    "swagger-autogen": "^2.18.8",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "http-status": "^1.5.0",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2",
+    "swagger-autogen": "^2.19.0",
     "swagger-ui-express": "^4.3.0"
   }
 }

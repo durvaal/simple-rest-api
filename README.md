@@ -1,6 +1,6 @@
 # Simple REST API
 
-A simple REST API with NodeJS and Express.
+A simple REST API with NodeJS, Express, Jest and Swagger.
 
 ## How to run
 
@@ -14,6 +14,11 @@ npm i
 
 ```
 npm start
+```
+### Run tests
+
+```
+npm run test
 ```
 
 ### View the endpoints documentation with Swagger

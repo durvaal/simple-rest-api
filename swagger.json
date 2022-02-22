@@ -11,6 +11,13 @@
     "http"
   ],
   "paths": {
+    "/docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
     "/": {
       "get": {
         "description": "",
