@@ -43,6 +43,25 @@ describe('API ::: Router ::: TO DO', () => {
     });
   });
 
+  describe('GET By ID', () => {
+    test('should return data by id', (done) => {
+      apiFactory
+        .get('/todo/1')
+        .set('Content-Type', 'application/json')
+        .end((err, res) => {
+          done();
+          const { body, status } = res;
+
+          expect(status).toEqual(HttpStatus.OK);
+
+          expect(body).toStrictEqual({
+            id: expect.any(Number),
+            task: expect.any(String),
+          });
+        });
+    });
+  });
+
   describe('POST', () => {
     test('should insert a new data and return all data', (done) => {
       apiFactory

@@ -9,6 +9,15 @@ router.get('/', (req, res, next) => {
   res.json(todoData.list);
 });
 
+// Lista de tarafa por Id
+router.get('/:id', (req, res, next) => {
+  // #swagger.tags = ['TODO']
+  // #swagger.description = 'Endpoint para listar tarefas por id.'
+  const indexById = todoData.list.findIndex((todo) => todo.id === parseInt(req.params.id, 10));
+
+  res.json(todoData.list[indexById]);
+});
+
 // Criar tarefa
 router.post('/', (req, res, next) => {
   // #swagger.tags = ['TODO']
