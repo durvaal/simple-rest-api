@@ -23,7 +23,7 @@ npm run test
 
 ### View the endpoints documentation with Swagger
 
-Visit [http://localhost/docs](http://localhost/docs)
+Visit [http://localhost:3000/docs](http://localhost:3000/docs)
 
 ### Execute the endpoints with REST Client (Plugin VSCode)
 
