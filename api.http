@@ -23,6 +23,9 @@ GET https://http.cat/200
 ### Listar Tarefas
 GET {{BASE_URL}}/todo
 
+### Listar Tarefas Por Id
+GET {{BASE_URL}}/todo/1
+
 ### Criar tarefa
 POST {{BASE_URL}}/todo
 Content-Type: application/json
